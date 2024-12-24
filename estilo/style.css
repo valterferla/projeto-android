@@ -1,0 +1,217 @@
+@charset "UTF-8" ;
+/* 
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fredericka+the+Great&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+DE+VA+Guides&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf');
+    font-weight: normal;
+
+}
+:root {
+    --cor0:  #c5ebd6;
+    --cor1:  #83e1ad;
+    --cor2:  #3ddc84;
+    --cor3:  #2fa866;
+    --cor4:  #1a5c37;
+    --cor5:  #063d1e;
+
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', serif;
+    --fonte-android: 'Android' , cursive;
+
+}
+/* todos abaixos e padrao depois configurar um a um se necessario */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+a.externo::after {
+    content: '\00A0\1F517';
+    /* significa que da um espaço exemplo Dan Morrill do simbolo e coloca o simbolo depois */
+}
+a.externo ::before {
+    content: '\00A0\1F517';
+}
+header {
+
+    background-image: linear-gradient(to bottom, var(--cor3), var (--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding: 40px;
+
+}
+header > h1{
+    color: rgb(254, 254, 254);
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.355);
+    font-weight: normal;
+    /* font-size e tamanho da letra*/
+
+}
+header > p {color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.307);
+}
+nav > a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+nav >a:hover {
+    background-color: var(--cor3);
+    color: yellow;
+}
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.492);
+    border-bottom-left-radius:10px;    
+    border-bottom-right-radius: 10px;
+    /* border-bottom left em baixo canto esquerdo com curva
+    right embaixa com curva tambem*/
+
+}
+
+
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.5em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+    font-weight: normal;
+    
+}
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+
+    /* text-aling paragrafo começa depois, font-size tamanho da letra, line-height: altura da linha
+}
+main img {
+    width: 100%;
+
+}
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+    /* max-width e a imagem no maximo vai espandir*/
+}
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+    
+}
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+main img {
+    width: 100%;
+}
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+div.video {
+background-color: var(--cor5);
+margin-bottom: 30px;
+margin: 0px -20px;
+padding: 20px;
+position: relative;
+padding-bottom: 58%;
+}
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+
+}
+
+
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin: -10px -10px 0px -10px;
+}
+aside > ul {
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+    /* lis e o ponto a posiçao ' tambem posso colocar no lugar do ponto outro simbolo em emojipedia check depois de colocar o codigo e list-style-type: '\2714\00A0\00A0' nao e compativel com todo navegador, columns e numero de colunas 2, 4, 5 , como eu quero*/
+}
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+
+}
+footer a {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
